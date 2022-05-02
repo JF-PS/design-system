@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import TextField from "../components/text-field/TextField";
+
+<Meta
+  title="Design System/TextField"
+  component={TextField}
+  argTypes={{
+    variant: {
+      options: ["outlined", "filled", "standard"],
+      control: { type: "radio" },
+    },
+  }}
+/>
+
+# Button
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <TextField label="TextField" value="TextField" />
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => <TextField label="TextField" {...args} />;
+
+<Story name="standard">{Template.bind({})}</Story>

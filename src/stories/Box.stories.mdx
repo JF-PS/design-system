@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Box from "../components/box/Box";
+
+<Meta
+  title="Design System/Box"
+  component={Box}
+  argTypes={{
+    variant: {
+      options: ["text", "contained", "outlined"],
+      control: { type: "radio" },
+    },
+  }}
+/>
+
+# Box
+
+### Controls
+
+blablabla text
+
+<Canvas>
+  <Story name="controls">{Template.bind({})}</Story>
+</Canvas>
+
+### Initials
+
+blablabla text
+
+<Story name="initials">
+  <div>
+    <Box>Box</Box>
+  </div>
+</Story>
+
+## Standard
+
+blablabla text
+
+export const Template = (args) => <Box {...args}>Box</Box>;
+
+<Story name="standard">{Template.bind({})}</Story>
